@@ -1,0 +1,2 @@
+# kawa.vimrc
+kawa vim
