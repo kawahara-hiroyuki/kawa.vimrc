@@ -15,4 +15,4 @@ vim_dein_dir=$vim_dir/dein
 
 # シンボリックリンク集
 ln -sf $HOME/.vimrc basic.vim 
-ln -sf ./dein $HOME/.vim/rc/dein
+ln -sf $HOME/.vim/rc/ dein
