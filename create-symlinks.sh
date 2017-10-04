@@ -14,5 +14,6 @@ vim_dein_dir=$vim_dir/dein
 [ -f $HOME/.vimrc ] && ( [ -f $HOME/.vimrc.ORIG ] || cp $HOME/.vimrc $HOME/.vimrc.ORIG)
 
 # シンボリックリンク集
-ln -sf $HOME/.vimrc basic.vim 
-ln -sf $HOME/.vim/rc/ dein
+ln -sf $dir/basic.vim $HOME/.vimrc
+ln -sf $vim_dein_dir dein
+

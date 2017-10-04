@@ -1,0 +1,12 @@
+[[plugins]]
+repo = 'Haron-Prime/Antares'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'Shougo/neocomplcache.vim'
+
