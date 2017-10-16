@@ -5,7 +5,7 @@ dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd;)
 #vim_conf_dir=$HOME/.vim/
 #conf_dir=$dir/conf.d
 # vimのディクトリ
-vim_dir=$HOME/.config/vim
+vim_dir=$HOME/.vim
 # dein用ディレクトリ
 vim_dein_dir=$vim_dir/rc/dein
 
