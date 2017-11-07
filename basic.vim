@@ -6,8 +6,6 @@ inoremap zx <esc>
 " 行番号の表示
 set number
 
-" vimrc に以下のように追記
-
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
 " dein.vim 本体
@@ -68,7 +66,7 @@ set noexpandtab
 noremap _ :TComment<CR>j
 
 " コード補完
-" let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
 " 使いづらいことがあるので、shogoさんのを探すこと
 
 " カーソルの位置を復元
@@ -92,4 +90,7 @@ autocmd FileType wsh,vb,aspvbs setlocal fileencoding=sjis
 " normalモードでもtabでインデントを開ける
 noremap <TAB> i<TAB><esc>
 
+" set backspace=2
+set nocompatible
+set backspace=indent,eol,start
 

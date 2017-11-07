@@ -12,7 +12,7 @@ repo = 'tomtom/tcomment_vim'
 
 # 保管してくれる機能
 [[plugins]]
-repo = 'Shougo/neocomplcache.vim'
+repo = 'Shougo/neocomplete.vim'
 
 # gitのbranchを表示してくれる
 [[plugins]]
