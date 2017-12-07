@@ -119,3 +119,6 @@ command! Csva :call CSVA()
 
 " クリップボードの共有
 set clipboard=unnamed,autoselect
+
+" ファイル末で差分を表示させない
+set nofixendofline
