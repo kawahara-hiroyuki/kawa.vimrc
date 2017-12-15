@@ -122,3 +122,6 @@ set clipboard=unnamed,autoselect
 
 " ファイル末で差分を表示させない
 set nofixendofline
+
+" dein: gitgetter
+let g:gitgutter_highlight_lines = 0
