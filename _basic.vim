@@ -87,45 +87,12 @@ set fileformats=unix,dos,mac
 autocmd FileType wsh,vb,aspvbs setlocal fileformat=dos
 autocmd FileType wsh,vb,aspvbs setlocal fileencoding=sjis 
 
-<<<<<<< HEAD
+" normalモードでもtabでインデントを開ける
+noremap <TAB> i<TAB><esc>
 
-=======
->>>>>>> 1b862485d4957eb9e412ec2f9aedd6076dd4ab77
 " set backspace=2
 set nocompatible
 set backspace=indent,eol,start
 
 " agのエディタ統合
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
-
-" 「:Csva」と打つと、リアルタイムに現在のカラムをハイライトにしてくれるもう一度打つと停止
-function! CSVH_SAVE_CURSOR()
-   let g:CsvaFlg = get(g:, 'CsvaFlg', 0)
-   if g:CsvaFlg == 1
-      execute 'match Keyword /^\([^, ]*[, ]\)\{'.strlen(substitute(getline('.')[0:col('.')-1], "[^, ]", "", "g")).'}\zs[^, ]*/'
-   endif
-endfunction
-augroup CsvCursorHighlight
-    autocmd!
-    autocmd BufWinEnter,InsertLeave,CursorMoved * call CSVH_SAVE_CURSOR()
-augroup END
-function! CSVA()
-   let g:CsvaFlg = get(g:, 'CsvaFlg', 0)
-   if g:CsvaFlg == 0
-      let g:CsvaFlg = 1
-   else
-      execute 'match none'
-      let g:CsvaFlg = 0
-   endif
-endfunction
-command! Csva :call CSVA()
-
-" クリップボードの共有
-set clipboard=unnamed,autoselect
-
-" ファイル末で差分を表示させない
-set nofixendofline
-
-" dein: gitgetter
-let g:gitgutter_highlight_lines = 0
