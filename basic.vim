@@ -87,8 +87,6 @@ set fileformats=unix,dos,mac
 autocmd FileType wsh,vb,aspvbs setlocal fileformat=dos
 autocmd FileType wsh,vb,aspvbs setlocal fileencoding=sjis 
 
-" normalモードでもtabでインデントを開ける
-noremap <TAB> i<TAB><esc>
 
 " set backspace=2
 set nocompatible
