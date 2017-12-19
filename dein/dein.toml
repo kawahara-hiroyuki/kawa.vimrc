@@ -1,12 +1,39 @@
+# カラースキーム
 [[plugins]]
 repo = 'Haron-Prime/Antares'
 
+# ディレクトリ階層を表示しれくれる
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
+# コメントアウトする機能
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
 
+# gitのbranchを表示してくれる
 [[plugins]]
-repo = 'Shougo/neocomplcache.vim'
+repo = 'cohama/agit.vim'
 
+# vimでshellを起動する準備
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+# vimでshellを起動できる
+[[plugins]]
+repo = 'Shougo/vimshell.vim'
+
+# ディレクトリ階層の比較
+[[plugins]]
+repo = 'vim-scripts/DirDiff.vim'
+
+# カッコの補間をしてくれる
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'Shougo/neocomplcache'

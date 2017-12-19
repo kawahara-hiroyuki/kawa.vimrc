@@ -6,8 +6,6 @@ inoremap zx <esc>
 " 行番号の表示
 set number
 
-" vimrc に以下のように追記
-
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
 " dein.vim 本体
@@ -68,7 +66,7 @@ set noexpandtab
 noremap _ :TComment<CR>j
 
 " コード補完
-" let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
 " 使いづらいことがあるので、shogoさんのを探すこと
 
 " カーソルの位置を復元
@@ -89,7 +87,53 @@ set fileformats=unix,dos,mac
 autocmd FileType wsh,vb,aspvbs setlocal fileformat=dos
 autocmd FileType wsh,vb,aspvbs setlocal fileencoding=sjis 
 
-" normalモードでもtabでインデントを開ける
-noremap <TAB> i<TAB><esc>
+" set backspace=2
+set nocompatible
+set backspace=indent,eol,start
+
+" agのエディタ統合
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
+" 「:Csva」と打つと、リアルタイムに現在のカラムをハイライトにしてくれるもう一度打つと停止
+function! CSVH_SAVE_CURSOR()
+   let g:CsvaFlg = get(g:, 'CsvaFlg', 0)
+   if g:CsvaFlg == 1
+      execute 'match Keyword /^\([^, ]*[, ]\)\{'.strlen(substitute(getline('.')[0:col('.')-1], "[^, ]", "", "g")).'}\zs[^, ]*/'
+   endif
+endfunction
+augroup CsvCursorHighlight
+    autocmd!
+    autocmd BufWinEnter,InsertLeave,CursorMoved * call CSVH_SAVE_CURSOR()
+augroup END
+function! CSVA()
+   let g:CsvaFlg = get(g:, 'CsvaFlg', 0)
+   if g:CsvaFlg == 0
+      let g:CsvaFlg = 1
+   else
+      execute 'match none'
+      let g:CsvaFlg = 0
+   endif
+endfunction
+command! Csva :call CSVA()
+
+" クリップボードの共有
+set clipboard=unnamed,autoselect
+
+" ファイル末で差分を表示させない
+set nofixendofline
+
+" dein: gitgetter
+let g:gitgutter_highlight_lines = 0
+
+" swapファイルを作成しない
+set noswapfile
+
+" backupファイルを作成しない
+set nobackup
+
+" viminfoファイルを作成しない
+set viminfo=
+
+" unファイルを作成しない
+set noundofile
