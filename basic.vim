@@ -125,3 +125,15 @@ set nofixendofline
 
 " dein: gitgetter
 let g:gitgutter_highlight_lines = 0
+
+" swapファイルを作成しない
+set noswapfile
+
+" backupファイルを作成しない
+set nobackup
+
+" viminfoファイルを作成しない
+set viminfo=
+
+" unファイルを作成しない
+set noundofile
