@@ -87,10 +87,6 @@ set fileformats=unix,dos,mac
 autocmd FileType wsh,vb,aspvbs setlocal fileformat=dos
 autocmd FileType wsh,vb,aspvbs setlocal fileencoding=sjis 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1b862485d4957eb9e412ec2f9aedd6076dd4ab77
 " set backspace=2
 set nocompatible
 set backspace=indent,eol,start
