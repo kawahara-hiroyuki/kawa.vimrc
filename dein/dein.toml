@@ -37,3 +37,7 @@ repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo = 'Shougo/neocomplcache'
+
+# 省吾さんのdenite。使い方を調べる必要あり。
+[[plugins]]
+repo = 'Shougo/denite.nvim'
