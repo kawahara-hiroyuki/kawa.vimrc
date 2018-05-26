@@ -208,3 +208,10 @@ nnoremap <ESC><ESC> :noh<Enter>
 " バックスペースを有効にする
 " set backspace=indent,eol,start
 set backspace=indent,eol,start
+
+" deniteの環境設定
+let g:python3_host_prog = '~/usr/local/bin/python3'
+
+
+
+
