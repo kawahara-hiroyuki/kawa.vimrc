@@ -41,3 +41,8 @@ repo = 'Shougo/neocomplcache'
 # 省吾さんのdenite。使い方を調べる必要あり。
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+
+# vimでもkotlinをsyntaxできるように
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+
