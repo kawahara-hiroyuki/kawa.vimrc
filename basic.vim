@@ -119,7 +119,7 @@ endfunction
 command! Csva :call CSVA()
 
 " クリップボードの共有
-set clipboard=unnamed,autoselect
+set clipboard=unnamedplus
 
 " ファイル末で差分を表示させない
 set nofixendofline
@@ -180,30 +180,6 @@ function! CSVA()
    endif
 endfunction
 command! Csva :call CSVA()
-
-" クリップボードの共有
-set clipboard=unnamed,autoselect
-
-" ファイル末で差分を表示させない
-set nofixendofline
-
-" dein: gitgetter
-let g:gitgutter_highlight_lines = 0
-
-" swapファイルを作成しない
-set noswapfile
-
-" backupファイルを作成しない
-set nobackup
-
-" viminfoファイルを作成しない
-set viminfo=
-
-" unファイルを作成しない
-nnoremap <ESC><ESC> :noh<Enter>
-
-" ファイルの差分を縦分割
-" nnoremap :vdiff :vertivaldiffsplit 
 
 " バックスペースを有効にする
 " set backspace=indent,eol,start
