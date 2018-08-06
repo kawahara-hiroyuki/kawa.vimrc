@@ -189,5 +189,6 @@ set backspace=indent,eol,start
 let g:python3_host_prog = '~/usr/local/bin/python3'
 
 
-
+" 日本語対応
+set ambiwidth=double
 
